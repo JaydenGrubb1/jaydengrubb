@@ -1,5 +1,15 @@
 {
+	"name": "jaydengrubb-portfolio",
 	"devDependencies": {
-		"firebase-tools": "^11.0.0"
+		"concurrently": "^7.3.0",
+		"firebase-tools": "^11.0.0",
+		"live-server": "^1.2.2",
+		"rimraf": "^3.0.2",
+		"sass": "^1.54.0"
+	},
+	"scripts": {
+		"start": "concurrently --kill-others \"sass --watch ./public/sass:./public/css --style expanded --update\" \"live-server ./public/\"",
+		"build": "rimraf ./public/css && sass ./public/sass:./public/css --style expanded --no-source-map",
+		"clean": "rimraf ./public/css"
 	}
 }
