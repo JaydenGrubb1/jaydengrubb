@@ -1,9 +1,83 @@
-html {
-	background-color: #1e1e1e;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Code+Pro&display=swap');
+
+:root {
+	font-family: 'Montserrat', sans-serif;
 }
 
-p, h1 {
-	font-family: sans-serif;
-	color: #e7e9eb;
-	text-align: center;
+html,
+body {
+	position: fixed;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+main {
+	height: 100%;
+	margin: 0;
+	overflow-x: hidden;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	scroll-snap-stop: always;
+
+	// background-image: url("../img/sample.png");
+	// background-repeat: no-repeat;
+	// background-size: cover;
+}
+
+section {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	scroll-snap-align: start;
+
+	color: #b1d4e0;
+	padding: 1em;
+
+	&:nth-of-type(1) {
+		background-color: #0c2d48;
+	}
+
+	&:nth-of-type(2) {
+		background-color: #145da0;
+	}
+
+	&:nth-of-type(3) {
+		background-color: #2e8bc0;
+	}
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+p {
+	font-size: 5em;
+}
+
+span {
+	font-family: 'Source Code Pro', monospace;
+	font-size: 2em;
+
+	a {
+		text-decoration: none;
+		color: #d7ba7d;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
