@@ -2,6 +2,7 @@
 
 :root {
 	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
 }
 
 html,
@@ -58,6 +59,7 @@ section {
 
 h1 {
 	font-size: 4em;
+	// text-align: left;
 }
 
 h2 {
@@ -68,9 +70,12 @@ p {
 	font-size: 5em;
 }
 
-span {
+.type-reveal {
 	font-family: 'Source Code Pro', monospace;
 	font-size: 2em;
+	position: relative;
+	--typing-char-num: 40;
+	--typing-duration: 1s;
 
 	a {
 		text-decoration: none;
@@ -79,5 +84,26 @@ span {
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+
+	&::before {
+		content: '';
+		background-color: #0c2d48;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		animation: typing 1s steps(var(--typing-char-num)) forwards;
+	}
+}
+
+.test {
+	padding-top: 1em;
+}
+
+@keyframes typing {
+	to {
+		left: 100%;
 	}
 }
