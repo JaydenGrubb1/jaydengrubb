@@ -2,6 +2,7 @@ jaydengrubb.com
 
 
 # Ideas
+- Coding game
 
 ## Layout
 
