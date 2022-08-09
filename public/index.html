@@ -9,30 +9,45 @@
 	<script defer src="/__/firebase/9.8.1/firebase-analytics-compat.js"></script>
 	<script defer src="/__/firebase/init.js?useEmulator=false"></script>
 	<script defer src="js/main.js"></script>
+	<script defer src="js/sticky.js"></script>
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-	<main>
-		<section>
-			<div>
-				<h2>Jayden Grubb</h2>
-				<h1>Aspiring Software / Web Developer</h1>
-				<div class="type-reveal">
-					<span id="lang-type-start"></span><a href="" id="lang-type-inner"></a><span id="lang-type-end"></span>
-				</div>
+	<header class="">
+		<div class="btn-container">
+			<button class="nav-btn" onclick="menuBtn()">
+				<div class="hamburger"></div>
+			</button>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="container">
+		<div class="spacer"></div>
+		<a href="#" class="logo sticky">Jayden Grubb</a>
+		<h1>
+			Aspiring Software Developer
+		</h1>
+		<!-- <div class="hero">
+			<div class="hero-title">
 			</div>
-		</section>
-		<section>
-			<p>TWO</p>
-		</section>
-		<section>
-			<p>THREE</p>
-		</section>
-		<section>
-			<p>FOUR</p>
-		</section>
-	</main>
+			TODO Parallax or 3D graphic
+			TODO Scrolldown indicator
+			TODO Social links
+		</div> -->
+		<div class="content">
+			<div class="useless">
+
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
