@@ -58,6 +58,7 @@ body {
 
 header {
 	position: fixed;
+	top: 0;
 	right: 0;
 
 	.nav-btn {
@@ -110,20 +111,10 @@ header {
 		animation: bg-anim 240s infinite alternate;
 		transition: transform 0.3s ease;
 
-		@keyframes bg-anim {
-			0% {
-				background-position: left;
-			}
-
-			100% {
-				background-position: right;
-			}
-		}
-
 		.page-links {
 			display: flex;
-			margin-top: 20vh;
-			height: 60vh;
+			margin-top: calc((40vh - 40px - 2em)/2);
+			height: calc(60vh - 40px - 2em);
 			flex-direction: column;
 			justify-content: space-between;
 			text-align: center;
@@ -135,7 +126,7 @@ header {
 				}
 			}
 		}
-		
+
 		.social-links {
 			bottom: 20px;
 			margin-left: 20%;
@@ -177,6 +168,83 @@ header {
 				transform: rotate(-405deg)
 			}
 		}
+	}
+}
+
+.logo {
+	display: block;
+	padding: 0.5em 0.5em 0.5em 0.7em;
+	font-size: 1.5em;
+	color: var(--text-primary);
+}
+
+.hero {
+	// height: calc(100vh - 2.5em);
+	height: 100vh;
+	margin-top: -3em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	h1 {
+		text-align: center;
+		font-size: 64px;
+		color: transparent;
+		background: var(--rainbow-gradient);
+		background-clip: text;
+		background-size: 1000%;
+		animation: bg-anim 240s infinite alternate;
+	}
+}
+
+.scroll-prompt {
+	position: fixed;
+	bottom: 1.25em;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	animation: text-pop-anim 3s infinite ease-in-out;
+
+	.scroll-text {
+		display: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			background-color: var(--text-primary);
+			width: 2px;
+			height: 2em;
+			top: 1.4em;
+			left: 50vw;
+		}
+	}
+}
+
+@keyframes bg-anim {
+	0% {
+		background-position: left;
+	}
+
+	100% {
+		background-position: right;
+	}
+}
+
+@keyframes text-pop-anim {
+	0% {
+		bottom: 1.25em;
+	}
+
+	80% {
+		bottom: 1.25em;
+	}
+
+	90% {
+		bottom: 2em;
+	}
+
+	100% {
+		bottom: 1.25em;
 	}
 }
 
