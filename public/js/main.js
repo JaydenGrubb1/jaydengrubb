@@ -26,20 +26,38 @@
 // container.style.setProperty('--typing-duration', len / 40 + 's');
 
 
-// DETECT STICKY STUCK
-// const el = document.querySelector(".logo")
-// const observer = new IntersectionObserver(
-// 	([e]) => {
-// 		e.target.classList.toggle("is-pinned", e.intersectionRatio < 1);
-// 	},
-// 	{ threshold: [1] }
-// );
-
-// observer.observe(el);
-
-
-//MENU OPEN CLOSE
+// MENU OPEN CLOSE
+let header = document.querySelector("header");
 function menuBtn() {
-	let header = document.querySelector("header");
+	if (window.matchMedia("(min-width: 600px)").matches)
+		return;
+
 	header.classList.toggle("open-nav");
+	document.body.classList.toggle("lock-scroll");
 }
+
+// HIDE SCROLL PROMPT
+const prompt = document.querySelector(".scroll-prompt");
+const content = document.querySelector(".content");
+const scrollObs = new IntersectionObserver(
+	([e]) => {
+		prompt.classList.toggle("hidden", e.isIntersecting);
+	},
+	{
+		threshold: 0,
+		rootMargin: "-10px"
+	}
+);
+scrollObs.observe(content);
+
+// SHOW ALTERNATE LOGO
+const logo = document.querySelector(".logo");
+const altLogo = document.querySelector(".hero h1");
+const logoObs = new IntersectionObserver(
+	([e]) => {
+		logo.classList.toggle("hidden", e.isIntersecting);
+	}, {
+	threshold: 0
+}
+);
+logoObs.observe(altLogo);
