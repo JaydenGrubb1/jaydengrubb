@@ -3,6 +3,7 @@
 // Remove default styles
 html,
 body {
+	width: 100vw;
 	margin: 0;
 	padding: 0;
 
@@ -44,6 +45,8 @@ a {
 
 	// --accent-gradient: linear-gradient(45deg, #40c9ff, #e81cff);
 	// --accent-gradient: linear-gradient(45deg, #00ff87, #60efff);
+	// --accent-gradient: linear-gradient(45deg, #ff930f, #fff95b);
+	// --accent-gradient: linear-gradient(45deg, #F9E7BB, #E97CBB, #3D47D9);
 	// --accent-gradient: linear-gradient(45deg, #eeaeca, #94bbe9);
 	// --accent-gradient: linear-gradient(45deg, #45caff, #ff1b6b);
 	--accent-gradient: linear-gradient(45deg, #fdbb2d, #b022c3);
@@ -209,13 +212,13 @@ header {
 
 	h1 {
 		text-align: center;
-		font-size: 64px;
+		font-size: 18vw;
 		font-weight: 600;
 		// margin-top: 25vh;
 		color: transparent;
 		background: var(--accent-gradient);
 		background-clip: text;
-		user-select: none;
+		// user-select: none;
 
 		// background: var(--rainbow-gradient);
 		// background-size: 1000%;
@@ -239,7 +242,6 @@ header {
 	.scroll-text {
 		display: relative;
 		user-select: none;
-		font-size: 1.15em;
 
 		&::after {
 			content: '';
@@ -321,7 +323,7 @@ header {
 						background: var(--accent-gradient);
 						transform: scaleX(0);
 						transform-origin: left;
-						transition: transform 0.2s ease-in;
+						transition: transform 0.12s ease-in;
 					}
 
 					&:hover::after {
@@ -334,8 +336,32 @@ header {
 				}
 			}
 
+			// .social-links {
+			// 	display: none;
+			// }
+
 			.social-links {
-				display: none;
+				flex-direction: column;
+				margin-left: unset;
+				width: unset;
+				bottom: 10px;
+				right: 10px;
+
+				a {
+					font-size: 1.5em;
+					display: block;
+					padding: 0.4em;
+					color: var(--text-primary);
+					background: var(--accent-gradient);
+					background-clip: text;
+					transition: transform 0.12s ease-in,
+						color 0.15s ease-in;
+
+					&:hover {
+						transform: translateY(-2px);
+						color: transparent;
+					}
+				}
 			}
 		}
 	}
@@ -360,15 +386,19 @@ header {
 
 	.hero {
 		margin-left: 15%;
-		width: 60%;
+		width: 70%;
 		// background-color: #fdbb2d88;
 
 		h2 {
 			display: unset;
+			font-weight: normal;
+			font-size: 2.5em;
 		}
 
 		h1 {
 			text-align: unset;
+			font-size: min(7.5vw, 6.5em);
+			margin: 0;
 		}
 	}
 
@@ -386,6 +416,12 @@ header {
 		}
 	}
 }
+
+// @media screen and (min-width: 2200px) {
+// 	:root {
+// 		font-size: 1.3em;
+// 	}
+// }
 
 .useless {
 	height: 1000vh;
