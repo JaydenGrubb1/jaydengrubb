@@ -43,20 +43,23 @@ a {
 	--bg-bottom: #090810;
 	--text-primary: #ffffff;
 
-	// --accent-gradient: linear-gradient(45deg, #40c9ff, #e81cff);
-	// --accent-gradient: linear-gradient(45deg, #00ff87, #60efff);
-	// --accent-gradient: linear-gradient(45deg, #ff930f, #fff95b);
-	// --accent-gradient: linear-gradient(45deg, #F9E7BB, #E97CBB, #3D47D9);
-	// --accent-gradient: linear-gradient(45deg, #eeaeca, #94bbe9);
-	// --accent-gradient: linear-gradient(45deg, #45caff, #ff1b6b);
-	--accent-gradient: linear-gradient(45deg, #fdbb2d, #b022c3);
+	--nav-anim-time: 0.3s;
+	--hover-anim-time: 0.12s;
+	--reveal-anim-time: 0.3s;
+	--hamburger-anim-time: 0.5s;
 
-	// --rainbow-gradient: linear-gradient(45deg,
-	// 		#b721ff,
-	// 		#2af598,
-	// 		#fec051,
-	// 		#fee140,
-	// 		#fa709a);
+	--nav-anim-ease: ease;
+	--hover-anim-ease: ease-in;
+	--reveal-anim-ease: ease-in-out;
+	--hamburger-anim-ease: ease-in-out;
+
+	--accent-gradient: linear-gradient(45deg, #fdbb2d, #b022c3);
+	// --accent-gradient: linear-gradient(45deg, #45caff, #ff1b6b);
+	// --accent-gradient: linear-gradient(45deg, #eeaeca, #94bbe9);
+	// --accent-gradient: linear-gradient(45deg, #f9e7bb, #e97cbb, #3d47d9);
+	// --accent-gradient: linear-gradient(45deg, #ff930f, #fff95b);
+	// --accent-gradient: linear-gradient(45deg, #00ff87, #60efff);
+	// --accent-gradient: linear-gradient(45deg, #40c9ff, #e81cff);
 }
 
 body {
@@ -97,10 +100,10 @@ header {
 			background-color: var(--text-primary);
 			width: 30px;
 			height: 2px;
-			transition: transform 0.5s ease-in-out,
-				bottom 0.5s ease-in-out,
-				top 0.5s ease-in-out,
-				width 0.5s ease-in-out;
+			transition: transform var(--hamburger-anim-time) var(--hamburger-anim-ease),
+				bottom var(--hamburger-anim-time) var(--hamburger-anim-ease),
+				top var(--hamburger-anim-time) var(--hamburger-anim-ease),
+				width var(--hamburger-anim-time) var(--hamburger-anim-ease);
 		}
 
 		&::before {
@@ -115,8 +118,6 @@ header {
 	}
 
 	nav {
-		// background: var(--rainbow-gradient);
-		// background-size: 2000%;
 		background: var(--accent-gradient);
 		position: fixed;
 		top: 0;
@@ -125,8 +126,7 @@ header {
 		right: 0;
 		z-index: 1;
 		transform: translateX(100%);
-		transition: transform 0.3s ease;
-		animation: bg-anim 60s infinite;
+		transition: transform var(--nav-anim-time) var(--nav-anim-ease);
 
 		.page-links {
 			display: flex;
@@ -156,10 +156,6 @@ header {
 			}
 		}
 	}
-
-	// .social-links {
-	// 	bottom: 0;
-	// }
 
 	&.open-nav {
 		nav {
@@ -214,15 +210,10 @@ header {
 		text-align: center;
 		font-size: 18vw;
 		font-weight: 600;
-		// margin-top: 25vh;
 		color: transparent;
 		background: var(--accent-gradient);
 		background-clip: text;
 		// user-select: none;
-
-		// background: var(--rainbow-gradient);
-		// background-size: 1000%;
-		animation: bg-anim 60s infinite;
 	}
 }
 
@@ -233,7 +224,7 @@ header {
 	width: 100%;
 	justify-content: center;
 	animation: text-pop-anim 3s infinite ease-in-out;
-	transition: transform 0.3s ease-in-out;
+	transition: transform var(--reveal-anim-time) var(--reveal-anim-ease);
 
 	&.hidden {
 		transform: translateY(300%);
@@ -255,19 +246,7 @@ header {
 	}
 }
 
-.content {}
-
-@keyframes bg-anim {
-	0% {
-		// background-position: left;
-		filter: hue-rotate(0deg);
-	}
-
-	100% {
-		// background-position: right;
-		// filter: hue-rotate(360deg);
-	}
-}
+// .content {}
 
 @keyframes text-pop-anim {
 	0% {
@@ -323,7 +302,7 @@ header {
 						background: var(--accent-gradient);
 						transform: scaleX(0);
 						transform-origin: left;
-						transition: transform 0.12s ease-in;
+						transition: transform var(--hover-anim-time) var(--hover-anim-ease);
 					}
 
 					&:hover::after {
@@ -354,8 +333,8 @@ header {
 					color: var(--text-primary);
 					background: var(--accent-gradient);
 					background-clip: text;
-					transition: transform 0.12s ease-in,
-						color 0.15s ease-in;
+					transition: transform var(--hover-anim-time) var(--hover-anim-ease),
+						color var(--hover-anim-time) var(--hover-anim-ease);
 
 					&:hover {
 						transform: translateY(-2px);
@@ -371,8 +350,8 @@ header {
 		color: white;
 		background: var(--accent-gradient);
 		background-clip: text;
-		transition: transform 0.5s ease-in-out,
-			color 0.2s ease-in;
+		transition: transform var(--reveal-anim-time) var(--reveal-anim-ease),
+			color var(--hover-anim-time) var(--hover-anim-ease);
 
 		&.hidden {
 			transform: translateX(-100%);
@@ -416,12 +395,6 @@ header {
 		}
 	}
 }
-
-// @media screen and (min-width: 2200px) {
-// 	:root {
-// 		font-size: 1.3em;
-// 	}
-// }
 
 .useless {
 	height: 1000vh;
