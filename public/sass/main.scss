@@ -100,6 +100,7 @@ header {
 			background-color: var(--text-primary);
 			width: 30px;
 			height: 2px;
+			left: 0;
 			transition: transform var(--hamburger-anim-time) var(--hamburger-anim-ease),
 				bottom var(--hamburger-anim-time) var(--hamburger-anim-ease),
 				top var(--hamburger-anim-time) var(--hamburger-anim-ease),
@@ -108,12 +109,10 @@ header {
 
 		&::before {
 			bottom: 5px;
-			left: 0;
 		}
 
 		&::after {
 			top: 5px;
-			left: 0;
 		}
 	}
 
@@ -136,9 +135,14 @@ header {
 			justify-content: space-between;
 			text-align: center;
 
-			a {
-				font-size: 2.4em;
-				color: var(--text-primary);
+			li {
+				transform: translateX(100vw);
+				transition: transform 0s var(--reveal-anim-ease) var(--reveal-anim-time);
+
+				a {
+					font-size: 2.4em;
+					color: var(--text-primary);
+				}
 			}
 		}
 
@@ -150,9 +154,14 @@ header {
 			position: fixed;
 			justify-content: space-between;
 
-			a {
-				font-size: 2em;
-				color: var(--text-primary);
+			li {
+				transform: translateX(100vw);
+				transition: transform 0s var(--reveal-anim-ease) var(--reveal-anim-time);
+
+				a {
+					font-size: 2em;
+					color: var(--text-primary);
+				}
 			}
 		}
 	}
@@ -160,6 +169,32 @@ header {
 	&.open-nav {
 		nav {
 			transform: translateX(0);
+
+			$var: 0;
+
+			.page-links li {
+				transform: translateX(0);
+				transition-duration: var(--reveal-anim-time);
+
+				@for $i from 1 through 5 {
+					&:nth-of-type(#{$i}) {
+						transition-delay: #{$var}s;
+						$var: $var +0.05;
+					}
+				}
+			}
+
+			.social-links li {
+				transform: translateX(0);
+				transition-duration: var(--reveal-anim-time);
+
+				@for $i from 1 through 5 {
+					&:nth-of-type(#{$i}) {
+						transition-delay: #{$var}s;
+						$var: $var +0.05;
+					}
+				}
+			}
 		}
 
 		.hamburger {
@@ -285,28 +320,33 @@ header {
 				height: unset;
 				flex-direction: row;
 
-				a {
-					font-size: 1.2em;
-					display: block;
-					padding: 0.25em 0.5em;
-					margin: 0.525em 0.5em;
-					position: relative;
+				li {
+					transform: unset;
+					transition: unset;
 
-					&::after {
-						content: '';
-						position: absolute;
-						left: 0;
-						bottom: 0;
-						width: 100%;
-						height: 2px;
-						background: var(--accent-gradient);
-						transform: scaleX(0);
-						transform-origin: left;
-						transition: transform var(--hover-anim-time) var(--hover-anim-ease);
-					}
+					a {
+						font-size: 1.2em;
+						display: block;
+						padding: 0.25em 0.5em;
+						margin: 0.525em 0.5em;
+						position: relative;
 
-					&:hover::after {
-						transform: scaleX(1);
+						&::after {
+							content: '';
+							position: absolute;
+							left: 0;
+							bottom: 0;
+							width: 100%;
+							height: 2px;
+							background: var(--accent-gradient);
+							transform: scaleX(0);
+							transform-origin: left;
+							transition: transform var(--hover-anim-time) var(--hover-anim-ease);
+						}
+
+						&:hover::after {
+							transform: scaleX(1);
+						}
 					}
 				}
 
@@ -326,19 +366,24 @@ header {
 				bottom: 10px;
 				right: 10px;
 
-				a {
-					font-size: 1.5em;
-					display: block;
-					padding: 0.4em;
-					color: var(--text-primary);
-					background: var(--accent-gradient);
-					background-clip: text;
-					transition: transform var(--hover-anim-time) var(--hover-anim-ease),
-						color var(--hover-anim-time) var(--hover-anim-ease);
+				li {
+					transform: unset;
+					transition: unset;
 
-					&:hover {
-						transform: translateY(-2px);
-						color: transparent;
+					a {
+						font-size: 1.5em;
+						display: block;
+						padding: 0.4em;
+						color: var(--text-primary);
+						background: var(--accent-gradient);
+						background-clip: text;
+						transition: transform var(--hover-anim-time) var(--hover-anim-ease),
+						color var(--hover-anim-time) var(--hover-anim-ease);
+						
+						&:hover {
+							transform: translateY(-2px);
+							color: transparent;
+						}
 					}
 				}
 			}
