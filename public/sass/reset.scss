@@ -1,0 +1,33 @@
+html,
+body {
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+
+	&::-webkit-scrollbar {
+		-webkit-appearance: none;
+		display: none;
+	}
+}
+
+* {
+	-webkit-tap-highlight-color: transparent;
+
+	&:focus-visible {
+		outline: none;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}

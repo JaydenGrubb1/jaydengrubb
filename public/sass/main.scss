@@ -1,72 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600&display=swap');
-
-// Remove default styles
-html,
-body {
-	width: 100vw;
-	margin: 0;
-	padding: 0;
-
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-	scroll-behavior: smooth;
-
-	&::-webkit-scrollbar {
-		-webkit-appearance: none;
-		display: none;
-	}
-}
-
-* {
-	-webkit-tap-highlight-color: transparent;
-
-	&:focus-visible {
-		outline: none;
-	}
-}
-
-ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-a {
-	text-decoration: none;
-}
-
-// General styles
-:root {
-	font-family: 'Montserrat', sans-serif;
-
-	--bg-top: #151223;
-	--bg-bottom: #090810;
-	--text-primary: #ffffff;
-
-	--nav-anim-time: 0.3s;
-	--hover-anim-time: 0.12s;
-	--reveal-anim-time: 0.3s;
-	--hamburger-anim-time: 0.5s;
-
-	--nav-anim-ease: ease;
-	--hover-anim-ease: ease-in;
-	--reveal-anim-ease: ease-in-out;
-	--hamburger-anim-ease: ease-in-out;
-
-	--accent-gradient: linear-gradient(45deg, #fdbb2d, #b022c3);
-	// --accent-gradient: linear-gradient(45deg, #45caff, #ff1b6b);
-	// --accent-gradient: linear-gradient(45deg, #eeaeca, #94bbe9);
-	// --accent-gradient: linear-gradient(45deg, #f9e7bb, #e97cbb, #3d47d9);
-	// --accent-gradient: linear-gradient(45deg, #ff930f, #fff95b);
-	// --accent-gradient: linear-gradient(45deg, #00ff87, #60efff);
-	// --accent-gradient: linear-gradient(45deg, #40c9ff, #e81cff);
-}
-
 body {
 	background: linear-gradient(var(--bg-top) 0%, var(--bg-top) 100vh, var(--bg-bottom) 100%);
 	background-size: 100%;
 	background-repeat: no-repeat;
-
+	
+	font-family: var(--main-font);
 	color: var(--text-primary);
 
 	&.lock-scroll {

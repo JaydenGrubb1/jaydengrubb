@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600&display=swap');
+
+:root {
+	--main-font: 'Montserrat', sans-serif;
+
+	--bg-top: #151223;
+	--bg-bottom: #090810;
+	--bg-secondary: #1e1a37;
+	--text-primary: #ffffff;
+
+	--nav-anim-time: 0.3s;
+	--hover-anim-time: 0.12s;
+	--reveal-anim-time: 0.3s;
+	--hamburger-anim-time: 0.5s;
+
+	--nav-anim-ease: ease;
+	--hover-anim-ease: ease-in;
+	--reveal-anim-ease: ease-in-out;
+	--hamburger-anim-ease: ease-in-out;
+
+	// --accent-gradient: linear-gradient(45deg, #fdb365, #fa7198);
+	--accent-gradient: linear-gradient(45deg, #fdbb2d, #b022c3);
+	// --accent-gradient: linear-gradient(45deg, #45caff, #ff1b6b);
+	// --accent-gradient: linear-gradient(45deg, #eeaeca, #94bbe9);
+	// --accent-gradient: linear-gradient(45deg, #f9e7bb, #e97cbb, #3d47d9);
+	// --accent-gradient: linear-gradient(45deg, #ff930f, #fff95b);
+	// --accent-gradient: linear-gradient(45deg, #00ff87, #60efff);
+	// --accent-gradient: linear-gradient(45deg, #40c9ff, #e81cff);
+}
