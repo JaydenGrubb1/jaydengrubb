@@ -1,9 +1,9 @@
 {
 	"name": "jaydengrubb-portfolio",
 	"devDependencies": {
-		"firebase-tools": "^11.0.0",
+		"firebase-tools": "^11.14.4",
 		"rimraf": "^3.0.2",
-		"sass": "^1.54.0"
+		"sass": "^1.55.0"
 	},
 	"scripts": {
 		"start": "sass --watch ./public/sass:./public/css --style expanded --update",
