@@ -2,7 +2,7 @@ body {
 	background: linear-gradient(var(--bg-top) 0%, var(--bg-top) 100vh, var(--bg-bottom) 100%);
 	background-size: 100%;
 	background-repeat: no-repeat;
-	
+
 	font-family: var(--main-font);
 	color: var(--text-primary);
 
@@ -165,10 +165,7 @@ header {
 }
 
 .hero {
-	// height: calc(100vh - 2.5em);
 	height: 100vh;
-	// display: flex;
-	// justify-content: center;
 
 	.hero-content {
 		padding-top: 25vh;
@@ -185,7 +182,6 @@ header {
 		color: transparent;
 		background: var(--accent-gradient);
 		background-clip: text;
-		// user-select: none;
 	}
 }
 
@@ -217,8 +213,6 @@ header {
 		}
 	}
 }
-
-// .content {}
 
 @keyframes text-pop-anim {
 	0% {
@@ -268,21 +262,15 @@ header {
 						margin: 0.525em 0.5em;
 						position: relative;
 
-						&::after {
-							content: '';
-							position: absolute;
-							left: 0;
-							bottom: 0;
-							width: 100%;
-							height: 2px;
-							background: var(--accent-gradient);
-							transform: scaleX(0);
-							transform-origin: left;
-							transition: transform var(--hover-anim-time) var(--hover-anim-ease);
-						}
+						background: var(--accent-gradient);
+						background-clip: text;
+						color: var(--text-primary);
+						transition: transform var(--hover-anim-time) var(--hover-anim-ease),
+							color var(--hover-anim-time) var(--hover-anim-ease);
 
-						&:hover::after {
-							transform: scaleX(1);
+						&:hover {
+							transform: scale(1.1);
+							color: transparent;
 						}
 					}
 				}
@@ -291,10 +279,6 @@ header {
 					display: none;
 				}
 			}
-
-			// .social-links {
-			// 	display: none;
-			// }
 
 			.social-links {
 				flex-direction: column;
@@ -315,10 +299,10 @@ header {
 						background: var(--accent-gradient);
 						background-clip: text;
 						transition: transform var(--hover-anim-time) var(--hover-anim-ease),
-						color var(--hover-anim-time) var(--hover-anim-ease);
-						
+							color var(--hover-anim-time) var(--hover-anim-ease);
+
 						&:hover {
-							transform: translateY(-2px);
+							transform: scale(1.15);
 							color: transparent;
 						}
 					}
@@ -329,7 +313,7 @@ header {
 
 	.logo {
 		font-weight: 600;
-		color: white;
+		color: var(--text-primary);
 		background: var(--accent-gradient);
 		background-clip: text;
 		transition: transform var(--reveal-anim-time) var(--reveal-anim-ease),
@@ -340,7 +324,7 @@ header {
 		}
 
 		&:hover {
-			// TODO Is there a better hover affect for the logo
+			transform: scale(1.05);
 			color: transparent;
 		}
 	}
@@ -348,7 +332,6 @@ header {
 	.hero {
 		margin-left: 15%;
 		width: 70%;
-		// background-color: #fdbb2d88;
 
 		h2 {
 			display: unset;

@@ -67,3 +67,6 @@ node_modules/
 
 # build css files
 /public/css/
+
+# Other
+/.hintrc
