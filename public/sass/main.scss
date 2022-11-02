@@ -283,7 +283,7 @@ header {
 						transition: transform var(--hover-anim-time) var(--hover-anim-ease),
 							color var(--hover-anim-time) var(--hover-anim-ease);
 
-						&:hover {
+						&:hover, &:focus {
 							transform: scale(1.1);
 							color: transparent;
 						}
@@ -316,7 +316,7 @@ header {
 						transition: transform var(--hover-anim-time) var(--hover-anim-ease),
 							color var(--hover-anim-time) var(--hover-anim-ease);
 
-						&:hover {
+						&:hover, &:focus {
 							transform: scale(1.15);
 							color: transparent;
 						}
@@ -338,7 +338,7 @@ header {
 			transform: translateX(-100%);
 		}
 
-		&:hover {
+		&:hover, &:focus {
 			transform: scale(1.05);
 			color: transparent;
 		}
