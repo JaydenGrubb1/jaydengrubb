@@ -154,6 +154,15 @@ header {
 	}
 }
 
+.bg-three {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -5;
+}
+
 .logo {
 	position: fixed;
 	display: block;
@@ -212,6 +221,12 @@ header {
 			left: 50%;
 		}
 	}
+}
+
+.content {
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @keyframes text-pop-anim {
