@@ -116,7 +116,7 @@ header {
 				@for $i from 1 through 5 {
 					&:nth-of-type(#{$i}) {
 						transition-delay: #{$var}s;
-						$var: $var +0.05;
+						$var: $var +0.025;
 					}
 				}
 			}
@@ -128,7 +128,7 @@ header {
 				@for $i from 1 through 5 {
 					&:nth-of-type(#{$i}) {
 						transition-delay: #{$var}s;
-						$var: $var +0.05;
+						$var: $var +0.025;
 					}
 				}
 			}
@@ -280,11 +280,13 @@ header {
 						background: var(--accent-gradient);
 						background-clip: text;
 						color: var(--text-primary);
+						transform-origin: center center;
 						transition: transform var(--hover-anim-time) var(--hover-anim-ease),
 							color var(--hover-anim-time) var(--hover-anim-ease);
 
-						&:hover, &:focus {
-							transform: scale(1.1);
+						&:hover,
+						&:focus {
+							transform: scaleX(1.1);
 							color: transparent;
 						}
 					}
@@ -313,10 +315,12 @@ header {
 						color: var(--text-primary);
 						background: var(--accent-gradient);
 						background-clip: text;
+						transform-origin: center center;
 						transition: transform var(--hover-anim-time) var(--hover-anim-ease),
 							color var(--hover-anim-time) var(--hover-anim-ease);
 
-						&:hover, &:focus {
+						&:hover,
+						&:focus {
 							transform: scale(1.15);
 							color: transparent;
 						}
@@ -331,6 +335,7 @@ header {
 		color: var(--text-primary);
 		background: var(--accent-gradient);
 		background-clip: text;
+		transform-origin: center center;
 		transition: transform var(--reveal-anim-time) var(--reveal-anim-ease),
 			color var(--hover-anim-time) var(--hover-anim-ease);
 
@@ -338,8 +343,9 @@ header {
 			transform: translateX(-100%);
 		}
 
-		&:hover, &:focus {
-			transform: scale(1.05);
+		&:hover,
+		&:focus {
+			transform: scaleX(1.05);
 			color: transparent;
 		}
 	}

@@ -3,6 +3,7 @@ jaydengrubb.com
 
 # Ideas
 - Coding game
+- Easter Eggs (e.g. Do a barrel roll)
 
 ## Layout
 
