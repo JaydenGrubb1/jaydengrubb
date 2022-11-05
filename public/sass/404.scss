@@ -50,7 +50,9 @@ body {
 		}
 
 		a {
-			font-size: 1.5em;
+			font-size: 1.8rem;
+			background: var(--accent-gradient);
+			margin-top: 0.5em;
 			color: var(--text-primary);
 			position: relative;
 			padding: 0.25em 0.5em;
@@ -75,12 +77,13 @@ body {
 			}
 
 			a {
-				transition: border-color var(--hover-anim-time) var(--hover-anim-ease),
+				transition: box-shadow var(--hover-anim-time) var(--hover-anim-ease),
 					color var(--hover-anim-time) var(--hover-anim-ease);
-
-				&:hover {
-					color: var(--text-secondary);
-					border-color: var(--text-secondary);
+	
+				&:hover,
+				&:focus:not(:focus-visible) {
+					color: var(--bg-top);
+					box-shadow: inset 7em 0 0 0 var(--text-primary);
 				}
 			}
 		}

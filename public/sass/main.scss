@@ -169,7 +169,7 @@ header {
 	top: 0;
 	left: 0;
 	padding: 0.5em 0.5em 0.5em 0.7em;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	color: var(--text-primary);
 }
 
@@ -178,19 +178,29 @@ header {
 
 	.hero-content {
 		padding-top: 25vh;
+		text-align: center;
 	}
 
-	h2 {
+	.hero-name {
 		display: none;
 	}
 
-	h1 {
+	.hero-heading {
 		text-align: center;
 		font-size: 18vw;
 		font-weight: 600;
 		color: transparent;
 		background: var(--accent-gradient);
 		background-clip: text;
+	}
+
+	.hero-btn {
+		background: var(--accent-gradient);
+		font-size: 1.65em;
+		color: var(--text-primary);
+		border: 2px solid var(--text-primary);
+		border-radius: 1em;
+		padding: 0.25em 0.5em;
 	}
 }
 
@@ -224,9 +234,11 @@ header {
 }
 
 .content {
-	max-width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 1rem;
+
+	section {
+		padding-top: 2.5rem;
+	}
 }
 
 @keyframes text-pop-anim {
@@ -285,7 +297,7 @@ header {
 							color var(--hover-anim-time) var(--hover-anim-ease);
 
 						&:hover,
-						&:focus {
+						&:focus:not(:focus-visible) {
 							transform: scaleX(1.1);
 							color: transparent;
 						}
@@ -320,7 +332,7 @@ header {
 							color var(--hover-anim-time) var(--hover-anim-ease);
 
 						&:hover,
-						&:focus {
+						&:focus:not(:focus-visible) {
 							transform: scale(1.15);
 							color: transparent;
 						}
@@ -344,8 +356,7 @@ header {
 		}
 
 		&:hover,
-		&:focus {
-			transform: scaleX(1.05);
+		&:focus:not(:focus-visible) {
 			color: transparent;
 		}
 	}
@@ -354,16 +365,38 @@ header {
 		margin-left: 15%;
 		width: 70%;
 
-		h2 {
-			display: unset;
-			font-weight: normal;
-			font-size: 2.5em;
+		.hero-content {
+			text-align: unset;
 		}
 
-		h1 {
+		.hero-name {
+			display: unset;
+			font-weight: normal;
+			font-size: 1.7em;
+		}
+
+		.hero-heading {
 			text-align: unset;
 			font-size: min(7.5vw, 6.5em);
 			margin: 0;
+		}
+
+		.hero-right {
+			text-align: right;
+		}
+
+		.hero-btn {
+			font-size: 1.8em;
+			font-weight: bold;
+			margin-top: 1em;
+			transition: box-shadow var(--hover-anim-time) var(--hover-anim-ease),
+				color var(--hover-anim-time) var(--hover-anim-ease);
+
+			&:hover,
+			&:focus:not(:focus-visible) {
+				color: var(--bg-top);
+				box-shadow: inset 7em 0 0 0 var(--text-primary);
+			}
 		}
 	}
 
@@ -383,5 +416,5 @@ header {
 }
 
 .useless {
-	height: 1000vh;
+	height: 300vh;
 }

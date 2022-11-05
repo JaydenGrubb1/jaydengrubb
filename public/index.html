@@ -22,7 +22,9 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@JaydenGrubb" />
 	<meta name="twitter:creator" content="@JaydenGrubb" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js" integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"
+		integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg=="
+		crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
 	<script defer src="https://kit.fontawesome.com/b0d37bbfab.js" crossorigin="anonymous"></script>
 	<script defer type="module">
@@ -59,12 +61,15 @@
 
 		<div class="hero">
 			<div class="hero-content">
-				<h2>
+				<span class="hero-name">
 					Jayden Grubb
-				</h2>
-				<h1>
+				</span>
+				<h1 class="hero-heading">
 					Aspiring Software Developer
 				</h1>
+				<div class="hero-right">
+					<a href="#projects" class="hero-btn">Learn More</a>
+				</div>
 			</div>
 		</div>
 
@@ -116,44 +121,63 @@
 		</header>
 
 		<div class="content">
-			<h2 id="projects">Projects</h2>
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti cupiditate suscipit laudantium
-				quibusdam cumque magnam voluptate voluptas quos, consequatur alias, asperiores quia, consequuntur ad ex
-				dolorem assumenda veritatis perspiciatis aliquam?</p>
-			<p>Et nobis, quo neque est vel maxime molestiae totam necessitatibus maiores dolore illum ex non in dolorem?
-				Quas est tempore, perspiciatis exercitationem sequi distinctio culpa error vel non rem pariatur!</p>
-			<p>Amet a aliquam nemo fugiat adipisci beatae suscipit nisi tempore rerum sed ab animi, corporis vitae unde?
-				Eaque dolore beatae officia sapiente mollitia! Molestias recusandae quam consectetur ea porro dolores!
-			</p>
-			<p>Magni aperiam praesentium qui pariatur officiis doloremque. Cumque, natus quia reprehenderit quos sit,
-				repellat dolores quidem fuga corrupti, provident aperiam voluptatibus pariatur corporis excepturi!
-				Laudantium facilis ea natus pariatur obcaecati.</p>
-			<h2 id="about">About</h2>
-			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, quis aliquid! Error velit modi
-				repudiandae ut, fugiat tempore, earum totam nemo, amet ullam explicabo cumque laborum non.
-				Necessitatibus, similique quae.</p>
-			<p>Omnis ea fuga ad quis porro ullam pariatur vitae incidunt, sit molestias odio eligendi itaque inventore
-				quam distinctio reprehenderit culpa eos perferendis ducimus sed aut. Nulla ratione illo assumenda
-				distinctio.</p>
-			<p>Repudiandae reiciendis optio maiores, iure laboriosam doloremque sequi error repellendus qui adipisci
-				accusamus in ex voluptatum facilis beatae? Tempora, inventore voluptates voluptate ex possimus quis
-				dolorem incidunt temporibus a libero!</p>
-			<p>Quos nostrum natus itaque enim adipisci quo dignissimos error possimus animi. Reprehenderit laboriosam
-				incidunt deserunt hic enim excepturi quaerat, ex sapiente, magni minus dolor odit corporis soluta,
-				quidem nemo. Mollitia!</p>
-			<p>Culpa hic inventore dolores. Magni nulla accusamus minima ducimus modi praesentium enim. Delectus ratione
-				veritatis error labore repellat quam doloremque voluptatum enim cum commodi, similique exercitationem
-				porro blanditiis aliquam. At.</p>
-			<p>Iure amet aliquam illum fuga et rem nesciunt fugit quam ipsam, corporis harum, itaque cumque nam. Et
-				minus in, cum hic ad veniam fugiat reiciendis, porro placeat ducimus distinctio aliquid.</p>
-			<p>Rem optio tempore dolorem dolores quaerat dicta perferendis recusandae incidunt deserunt! Sit ex
-				repudiandae impedit maiores voluptate eligendi dolorum molestias possimus in soluta dolores doloribus,
-				facere pariatur? Vero, omnis animi?</p>
-			<h2 id="contact">Contact</h2>
-			you what m8?
-			<br>
-			<br>
-			<a href="mailto:contact@jaydengrubb.com">contact@jaydengrubb.com</a>
+			<section id="projects">
+				<h2>Projects</h2>
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti cupiditate suscipit laudantium
+					quibusdam cumque magnam voluptate voluptas quos, consequatur alias, asperiores quia, consequuntur ad
+					ex
+					dolorem assumenda veritatis perspiciatis aliquam?</p>
+				<p>Et nobis, quo neque est vel maxime molestiae totam necessitatibus maiores dolore illum ex non in
+					dolorem?
+					Quas est tempore, perspiciatis exercitationem sequi distinctio culpa error vel non rem pariatur!</p>
+				<p>Amet a aliquam nemo fugiat adipisci beatae suscipit nisi tempore rerum sed ab animi, corporis vitae
+					unde?
+					Eaque dolore beatae officia sapiente mollitia! Molestias recusandae quam consectetur ea porro
+					dolores!
+				</p>
+				<p>Magni aperiam praesentium qui pariatur officiis doloremque. Cumque, natus quia reprehenderit quos
+					sit,
+					repellat dolores quidem fuga corrupti, provident aperiam voluptatibus pariatur corporis excepturi!
+					Laudantium facilis ea natus pariatur obcaecati.</p>
+			</section>
+
+			<section id="about">
+				<h2>About</h2>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, quis aliquid! Error velit modi
+					repudiandae ut, fugiat tempore, earum totam nemo, amet ullam explicabo cumque laborum non.
+					Necessitatibus, similique quae.</p>
+				<p>Omnis ea fuga ad quis porro ullam pariatur vitae incidunt, sit molestias odio eligendi itaque
+					inventore
+					quam distinctio reprehenderit culpa eos perferendis ducimus sed aut. Nulla ratione illo assumenda
+					distinctio.</p>
+				<p>Repudiandae reiciendis optio maiores, iure laboriosam doloremque sequi error repellendus qui adipisci
+					accusamus in ex voluptatum facilis beatae? Tempora, inventore voluptates voluptate ex possimus quis
+					dolorem incidunt temporibus a libero!</p>
+				<p>Quos nostrum natus itaque enim adipisci quo dignissimos error possimus animi. Reprehenderit
+					laboriosam
+					incidunt deserunt hic enim excepturi quaerat, ex sapiente, magni minus dolor odit corporis soluta,
+					quidem nemo. Mollitia!</p>
+				<p>Culpa hic inventore dolores. Magni nulla accusamus minima ducimus modi praesentium enim. Delectus
+					ratione
+					veritatis error labore repellat quam doloremque voluptatum enim cum commodi, similique
+					exercitationem
+					porro blanditiis aliquam. At.</p>
+				<p>Iure amet aliquam illum fuga et rem nesciunt fugit quam ipsam, corporis harum, itaque cumque nam. Et
+					minus in, cum hic ad veniam fugiat reiciendis, porro placeat ducimus distinctio aliquid.</p>
+				<p>Rem optio tempore dolorem dolores quaerat dicta perferendis recusandae incidunt deserunt! Sit ex
+					repudiandae impedit maiores voluptate eligendi dolorum molestias possimus in soluta dolores
+					doloribus,
+					facere pariatur? Vero, omnis animi?</p>
+			</section>
+
+			<section id="contact">
+				<h2>Contact</h2>
+				you what m8?
+				<br>
+				<br>
+				<a href="mailto:contact@jaydengrubb.com">contact@jaydengrubb.com</a>
+			</section>
+
 			<div class="useless"></div>
 		</div>
 	</div>
