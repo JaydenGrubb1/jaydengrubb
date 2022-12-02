@@ -18,7 +18,10 @@ body {
 		align-items: center;
 
 		h1 {
-			writing-mode: vertical-lr;
+			// writing-mode: vertical-lr;
+			word-break: break-all;
+			text-align: center;
+			line-height: 80%;
 			color: var(--bg-secondary);
 			font-size: 40vh;
 			margin: 0;
@@ -52,6 +55,8 @@ body {
 		a {
 			font-size: 1.8rem;
 			background: var(--accent-gradient);
+			background-size: 180%;
+			background-position: 40%;
 			margin-top: 0.5em;
 			color: var(--text-primary);
 			position: relative;

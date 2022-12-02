@@ -196,6 +196,8 @@ header {
 
 	.hero-btn {
 		background: var(--accent-gradient);
+		background-size: 180%;
+		background-position: 40%;
 		font-size: 1.65em;
 		color: var(--text-primary);
 		border: 2px solid var(--text-primary);
