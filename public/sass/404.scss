@@ -18,7 +18,10 @@ body {
 		align-items: center;
 
 		h1 {
-			writing-mode: vertical-lr;
+			// writing-mode: vertical-lr;
+			word-break: break-all;
+			text-align: center;
+			line-height: 80%;
 			color: var(--bg-secondary);
 			font-size: 40vh;
 			margin: 0;
@@ -50,7 +53,11 @@ body {
 		}
 
 		a {
-			font-size: 1.5em;
+			font-size: 1.8rem;
+			background: var(--accent-gradient);
+			background-size: 180%;
+			background-position: 40%;
+			margin-top: 0.5em;
 			color: var(--text-primary);
 			position: relative;
 			padding: 0.25em 0.5em;
@@ -75,12 +82,13 @@ body {
 			}
 
 			a {
-				transition: border-color var(--hover-anim-time) var(--hover-anim-ease),
+				transition: box-shadow var(--hover-anim-time) var(--hover-anim-ease),
 					color var(--hover-anim-time) var(--hover-anim-ease);
-
-				&:hover {
-					color: var(--text-secondary);
-					border-color: var(--text-secondary);
+	
+				&:hover,
+				&:focus:not(:focus-visible) {
+					color: var(--bg-top);
+					box-shadow: inset 7em 0 0 0 var(--text-primary);
 				}
 			}
 		}
