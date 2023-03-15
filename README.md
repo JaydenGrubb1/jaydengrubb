@@ -15,5 +15,13 @@ My personal homepage to be displayed at [jaydengrubb.com](https://www.jaydengrub
 | [Three.js](https://threejs.org/) | JavaScript library used to render 3D models and animations in the browser |
 | [Firebase](https://firebase.google.com/) | Provides hosting and analytics as well as basic CI/CD when used with GitHub |
 
+## Images
+![Concept art](docs/images/concept.png "Current concept art")  
+
+![Current desktop prototype](docs/images/prototype.png "Current desktop prototype")  
+
+![Current mobile protype](docs/images/mobile%20prototype.png "Current mobile prototype with and without menu open")  
+
+*\* note aliasing of 3d model is less apparent in live version when animated*
 ## License
 [BSD-3-Clause License](LICENSE)
