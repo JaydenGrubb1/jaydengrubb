@@ -8,8 +8,8 @@
 		"sass": "^1.75.0"
 	},
 	"scripts": {
-		"start": "concurrently --kill-others \"sass --watch ./public/sass:./public/css --style expanded --update\" \"live-server ./public/\"",
-		"build": "rimraf ./public/css && sass ./public/sass:./public/css --style expanded --no-source-map",
+		"start": "concurrently --kill-others \"sass --watch ./src/sass:./public/css --style expanded --update\" \"live-server ./public/\"",
+		"build": "rimraf ./public/css && sass ./src/sass:./public/css --style expanded --no-source-map",
 		"clean": "rimraf ./public/css"
 	}
 }
